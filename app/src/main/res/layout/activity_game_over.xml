@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_error"
+    tools:context=".activities.GameOverActivity">
+
+    <View
+        android:id="@+id/gameOverBox"
+        android:layout_width="400dp"
+        android:layout_height="240dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/gameover_background" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/red"
+        android:fontFamily="@font/hackbot"
+        android:textSize="50sp"
+        android:text="@string/game_over"/>
+
+
+    <View
+        android:id="@+id/coinBox"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/counter_background" />
+    <ImageView
+        android:id="@+id/coinLogo"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignStart="@+id/coinBox"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="175dp"
+        android:background="@drawable/coin_logo" />
+    <TextView
+        android:id="@+id/coinCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/coinLogo"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="176dp"
+        android:textAlignment="textStart"/>
+
+
+    <View
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/counter_background" />
+    <TextView
+        android:id="@+id/scoreTitle"
+        android:text="SCORE:"
+        android:layout_width="75dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="18dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/hackbot"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="75dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="2dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/scoreTitle"
+        android:fontFamily="@font/hackbot"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/gameOverReplay"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/replay_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="220dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gameOverReplay"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:fontFamily="@font/hackbot"
+        android:text="RETRY"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/gameOverGotoUpgrades"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/goto_upgrades_button"
+        android:layout_toStartOf="@id/gameOverReplay"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="220dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gameOverGotoUpgrades"
+        android:layout_marginTop="10dp"
+        android:layout_toStartOf="@id/gameOverReplay"
+        android:layout_marginEnd="30dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:fontFamily="@font/hackbot"
+        android:text="UPGRADES"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/gameOverGotoMenu"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/goto_menu_button"
+        android:layout_toEndOf="@id/gameOverReplay"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="220dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gameOverGotoMenu"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/gameOverReplay"
+        android:layout_marginStart="50dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:fontFamily="@font/hackbot"
+        android:text="MENU"
+        android:textSize="18sp"/>
+
+</RelativeLayout>

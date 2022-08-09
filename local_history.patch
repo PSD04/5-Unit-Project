@@ -1,0 +1,35 @@
+Index: app/src/main/java/com/example/myapp2/GameView.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myapp2/GameView.java b/app/src/main/java/com/example/myapp2/GameView.java
+--- a/app/src/main/java/com/example/myapp2/GameView.java	(date 1640207084486)
++++ b/app/src/main/java/com/example/myapp2/GameView.java	(date 1640207084486)
+@@ -161,7 +161,7 @@
+                     shootJoystick.setIsPressed(true);
+                 }
+ 
+-                if(event.getX()<Resources.getSystem().getDisplayMetrics().widthPixels/3.0&&
++                else if(event.getX()<Resources.getSystem().getDisplayMetrics().widthPixels/3.0&&
+                         (joystickPointerId == pointerId || joystickPointerId == -1)){
+                     joystick.setBaseCenterPositionX((int)event.getX());
+                     joystick.setBaseCenterPositionY((int)event.getY());
+@@ -173,7 +173,7 @@
+                 if(joystick.getIsPressed() && pointerId==joystickPointerId){
+                     joystick.setActuator(event.getX(),event.getY());
+                 }
+-                if(shootJoystick.getIsPressed() && pointerId==shootJoystickPointerId){
++                else if(shootJoystick.getIsPressed() && pointerId==shootJoystickPointerId){
+                     shootJoystick.setActuator(event.getX(),event.getY());
+                 }
+                 return true;
+@@ -185,7 +185,7 @@
+                     return true;
+                 }
+ 
+-                if(shootJoystickPointerId == pointerId){
++                else if(shootJoystickPointerId == pointerId){
+                     shootJoystick.setIsPressed(false);
+                     shootJoystick.resetActuator();
+                     return true;
